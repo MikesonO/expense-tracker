@@ -3,7 +3,7 @@ import ExpenseItem from "./components/ExpenseItem";
 function App() {
   return (
     <div>
-      <h2>Expense Tracker</h2>
+      <h2 id="title">Expense Tracker</h2>
       <ExpenseItem></ExpenseItem>
     </div>
   );
