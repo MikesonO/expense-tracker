@@ -1,4 +1,5 @@
 import ExpenseItem from './ExpenseItem';
+import Card from './Card';
 import './Expenses.scss';
 
 function Expenses (data) {
@@ -6,7 +7,7 @@ function Expenses (data) {
   const expense = data.expense;
 
   return (
-    <div className='expenses'>
+    <Card className='expenses'>
       <ExpenseItem
       title={expense[0].title}
       amount={expense[0].ammount}
@@ -27,7 +28,7 @@ function Expenses (data) {
       amount={expense[3].ammount}
       date={expense[3].date}
     />
-  </div>
+  </Card>
   );
 
 }
