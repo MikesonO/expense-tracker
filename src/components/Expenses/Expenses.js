@@ -2,7 +2,7 @@ import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import './Expenses.scss';
 
-function Expenses (data) {
+const Expenses = (data) => {
 
   const expense = data.expense;
 
