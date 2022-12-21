@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./NewExpense.scss";
  
-const NewExpense = () => {
+const NewExpense = (props) => {
 
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
@@ -25,10 +25,11 @@ const NewExpense = () => {
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: new Date(enteredDate)
+      date: new Date(enteredDate),
+      id: Math.random()
     }
 
-    console.log(expenseData);
+    props.onAddExpense(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
