@@ -7,7 +7,8 @@ import './Expenses.scss';
 
 const Expenses = (data) => {
 
-  const [filteredYear, setFilteredYear] = useState('2020');
+  const currentYear = new Date().getFullYear();
+  const [filteredYear, setFilteredYear] = useState(`${currentYear}`);
 
   const expenses = data.expense;
 
