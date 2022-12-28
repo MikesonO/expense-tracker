@@ -1,0 +1,13 @@
+//Color Variable
+$color1: #EEEEEE;
+
+
+.expenses-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expenses-list__fallback {
+  color: $color1;
+  text-align: center;
+}

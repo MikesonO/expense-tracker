@@ -1,4 +1,5 @@
 import ExpenseItem from './ExpenseItem';
+import './ExpensesList.scss';
 
 const ExpensesList = props => {
 
