@@ -1,3 +1,4 @@
+import './ChartBar.scss';
 
 const ChartBar = data => {
   let barFill = '0%';
