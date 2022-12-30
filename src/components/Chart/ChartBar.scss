@@ -1,8 +1,7 @@
 //Color Variable
-$color1: #EEEEEE;
-$color2: #FFD369;
-$color3: #393E46;
-$color4: #1E2022;
+$color1: #FFD369;
+$color2: #393E46;
+$color3: #1E2022;
 
 .chart-bar {
   height: 100%;
@@ -13,10 +12,10 @@ $color4: #1E2022;
 
 .chart-bar__inner {
   height: 100%;
-  width: 100%;
-  border: 1px solid #313131;
+  width: 15px;
+  border: 1px solid $color3;
   border-radius: 12px;
-  background-color: #c3b4f3;
+  background-color: $color2;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -24,7 +23,7 @@ $color4: #1E2022;
 }
 
 .chart-bar__fill {
-  background-color: #4826b9;
+  background-color: $color1;
   width: 100%;
   transition: all 0.3s ease-out;
 }

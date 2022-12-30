@@ -3,7 +3,7 @@ import './ChartBar.scss';
 const ChartBar = data => {
   let barFill = '0%';
 
-  if (data.max > 0) {
+  if (data.maxValue > 0) {
     barFill = Math.round((data.value / data.maxValue) * 100) + '%';
   }
 
