@@ -1,9 +1,9 @@
 import ExpenseItem from './ExpenseItem';
 import './ExpensesList.scss';
 
-const ExpensesList = props => {
+const ExpensesList = data => {
 
-  const expenses = props.items;
+  const expenses = data.items;
 
   //Check if expenses is empty
   if (expenses.length === 0) {
@@ -14,9 +14,11 @@ const ExpensesList = props => {
     {expenses.map((expense) => (
       <ExpenseItem 
         key={expense.id}
+        id={expense.id}
         title={expense.title} 
         amount ={expense.amount} 
         date={expense.date}
+        onDeleteExpense={data.onDeleteExpense}
       />
     ))}
   </ul>

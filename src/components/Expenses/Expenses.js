@@ -21,7 +21,6 @@ const Expenses = (data) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
-
   return (
     <div>
       <Card className='expenses'>
@@ -30,7 +29,7 @@ const Expenses = (data) => {
         onChangeFilter={filterChangeHandler}  
       />
       <ExpensesChart expenses={filteredExpenses}/>
-      <ExpensesList items={filteredExpenses}/>
+      <ExpensesList items={filteredExpenses} onDeleteExpense={data.onDeleteExpense}/>
    </Card>
   </div>
   );
