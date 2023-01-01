@@ -35,6 +35,8 @@ const NewExpense = (props) => {
 
   }
 
+  let currentYear = new Date().getFullYear();
+
   return (
     <div className="new-expense">
       <form onSubmit={submitHandler}>
@@ -49,7 +51,7 @@ const NewExpense = (props) => {
           </div>
           <div className="new-expense__control">
             <label>Date</label>
-            <input type="date" value={enteredDate} min="2019-01-01" max="2022-12-31" onChange={dateChangeHandler}/>
+            <input type="date" value={enteredDate} min={`${currentYear - 1}-01-01`} max={`${currentYear +2}-12-31`}onChange={dateChangeHandler}/>
           </div>
         </div>
         <div className="new-expense__actions">
