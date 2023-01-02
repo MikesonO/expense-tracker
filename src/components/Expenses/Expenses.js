@@ -4,6 +4,7 @@ import Card from '../UI/Card';
 import ExpenseFilter from './ExpenseFilter';
 import ExpensesList from './ExpensesList';
 import ExpensesChart from './ExpensesChart';
+import ExpenseTotal from './ExpenseTotal';
 import './Expenses.scss';
 
 const Expenses = (data) => {
@@ -30,6 +31,8 @@ const Expenses = (data) => {
       />
       <ExpensesChart expenses={filteredExpenses}/>
       <ExpensesList items={filteredExpenses} onDeleteExpense={data.onDeleteExpense}/>
+      <ExpenseTotal total={filteredExpenses}/>
+      
    </Card>
   </div>
   );
